@@ -4,6 +4,8 @@ from .models import Post, Group
 
 
 LIMIT = 10
+
+
 def index(request):
     template = 'posts/index.html'
     posts = Post.objects.all()[:LIMIT]
