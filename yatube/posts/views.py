@@ -1,9 +1,7 @@
-from turtle import title
-from django.shortcuts import render, get_object_or_404 
-
+from django.shortcuts import render, get_object_or_404
 from .models import Post, Group
 
-#LIMIT = 10 
+
 def index(request):
     template = 'posts/index.html'
     title = 'Последние обновления на сайте'
