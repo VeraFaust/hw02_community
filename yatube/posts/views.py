@@ -8,7 +8,7 @@ LIMIT = 10
 
 def index(request):
     template = 'posts/index.html'
-    posts = Post.objects.all()[:LIMIT]
+    posts = Post.objects.select_related('group', 'author').all()[:LIMIT]
     context = {
         'posts': posts,
     }
@@ -18,7 +18,7 @@ def index(request):
 def group_posts(request, slug):
     template = 'posts/group_list.html'
     group = get_object_or_404(Group, slug=slug)
-    posts = group.posts.all()[:LIMIT]
+    posts = group.posts.all().select_related('group', 'author')[:LIMIT]
     context = {
         'group': group,
         'posts': posts,

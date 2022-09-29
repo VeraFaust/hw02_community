@@ -2,14 +2,14 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  <title>Последние обновления на сайте</title>
+  Последние обновления на сайте
 {% endblock %}
 
 {% block content %}
   <div class="container py-5">
     <h1>Последние обновления на сайте</h1>
-    <article>
       {% for post in posts %}
+      <article>
         <ul>
           <li>
             Автор: {{ post.author.get_full_name }}
@@ -22,8 +22,10 @@
         {% if post.group %}
           <a href="{% url 'posts:group_list' post.group.slug %}">все записи из дневника 1854 года</a>
         {% endif %}
-        {% if not forloop.last %}<hr>{% endif %}
+        {% if not forloop.last %}
+          <hr>
+        {% endif %}
+      </article>
       {% endfor %}
-    </article>
   </div>
 {% endblock %}
