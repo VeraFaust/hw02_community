@@ -8,7 +8,7 @@
 {% block content %}
   <div class="container py-5">
     <h1>Последние обновления на сайте</h1>
-      {% for post in posts %}
+    {% for post in posts %}
       <article>
         <ul>
           <li>
@@ -26,6 +26,6 @@
           <hr>
         {% endif %}
       </article>
-      {% endfor %}
+    {% endfor %}
   </div>
 {% endblock %}

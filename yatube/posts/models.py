@@ -12,10 +12,13 @@ class Group(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+         verbose_name_plural = 'Группы'
+  
 
 class Post(models.Model):
     text = models.TextField(verbose_name='Текст')
-    pub_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата ')
+    pub_date = models.DateTimeField('Дата публикации',auto_now_add=True)
     author = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
@@ -35,3 +38,4 @@ class Post(models.Model):
         ordering = (
             '-pub_date',
     )
+        verbose_name = 'Записи'
