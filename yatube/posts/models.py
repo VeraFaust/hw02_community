@@ -8,18 +8,21 @@ class Group(models.Model):
     title = models.CharField('Название', max_length=200)
     slug = models.SlugField(unique=True, verbose_name='URL')
     description = models.TextField(verbose_name='Описание')
-    
+
     class Meta:
         verbose_name_plural = 'Группы'
         verbose_name = 'Группа'
 
     def __str__(self):
         return self.title
-  
+
 
 class Post(models.Model):
     text = models.TextField(verbose_name='Текст')
-    pub_date = models.DateTimeField(auto_now_add=True, verbose_name = 'Дата публикации')
+    pub_date = models.DateTimeField(
+        auto_now_add=True, 
+        verbose_name = 'Дата публикации'
+    )
     author = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
@@ -35,8 +38,6 @@ class Post(models.Model):
     )
 
     class Meta:
-        ordering = (
-            '-pub_date',
-    )
+        ordering = ('-pub_date',)
         verbose_name_plural = 'Посты'
         verbose_name = 'Пост'
