@@ -5,7 +5,7 @@ User = get_user_model()
 
 
 class Group(models.Model):
-    """Группа."""
+    """Модель для группы."""
     title = models.CharField(
         verbose_name='Название',
         max_length=200
@@ -27,7 +27,7 @@ class Group(models.Model):
 
 
 class Post(models.Model):
-    """Пост."""
+    """Модель для поста."""
     text = models.TextField(
         verbose_name='Текст'
     )
