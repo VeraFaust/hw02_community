@@ -5,6 +5,7 @@ from .models import Post, Group
 
 LIMIT = 10
 
+
 def index(request):
     """Главная страница."""
     template = 'posts/index.html'
