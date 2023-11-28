@@ -43,8 +43,8 @@ py manage.py createsuperuser
 python manage.py runserver
 ```
 Перейти по ссылке  
-http://127.0.0.1:8000/-сайт  
-http://127.0.0.1:8000/admin-админ-зона  
+http://127.0.0.1:8000/  
+http://127.0.0.1:8000/admin  
 
 Остановить работу:
 ```
