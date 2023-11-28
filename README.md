@@ -18,7 +18,7 @@ Yatube - это социальная сеть.
 - Django ORM;
 - SQL.
 
-## Запуск проекта в dev-режиме:
+## Запуск проекта:
 - Установите и активируйте виртуальное окружение:
 ```
 python -m venv venv
@@ -27,16 +27,25 @@ python -m venv venv
 source venv/Scripts/activate
 ```
 
-- Установите зависимости из файла requirements.txt
+- Установите зависимости из файла requirements.txt:
+```
+py -m pip install --upgrade pip
+```
 ```
 pip install -r requirements.txt
 ```
 
-- В папке с файлом manage.py выполните команду:
+- В папке с файлом manage.py создайте админа и запустите проект:
+```
+py manage.py createsuperuser
+```
 ```
 python manage.py runserver
 ```
-Перейти по адресу http://127.0.0.1:8000/  
+Перейти по ссылке  
+http://127.0.0.1:8000/-сайт  
+http://127.0.0.1:8000/admin-админ-зона  
+
 Остановить работу:
 ```
 Ctrl+C
