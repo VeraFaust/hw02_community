@@ -23,10 +23,6 @@ Yatube - это социальная сеть.
 ```
 git clone https://github.com/VeraFaust/hw02_community.git
 ```
-- Откройте папку с проектом в IDE:
-```
-cd hw02_community
-```
 
 - Установите и активируйте виртуальное окружение:
 ```
